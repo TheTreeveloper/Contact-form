@@ -1,29 +1,36 @@
 import { useState } from "react";
 
 function ContactForm() {
-  const [errorMessage, setErrorMessage] = useState("");
-  const [errorMessagePassword, setErrorMessagePassword] = useState("");
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState<string>("");
+  const [errorMessagePassword, setErrorMessagePassword] = useState<string>("");
+  const [username, setUsername] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
 
-  function handleInputChange(e) {
+  function handleInputChange(e: React.ChangeEvent<HTMLInputElement>) {
     setUsername(e.target.value);
   }
 
-  const handlePasswordChange = (e) => {
+  const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(e.target.value);
   };
 
-  function handleSubmit(e) {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    if (username === "" || password === "") {
+    if (username === "") {
       setErrorMessage("Please enter a username");
-      setErrorMessagePassword("Password is required");
     } else {
       setErrorMessage("");
+    }
+
+    if (password === "") {
+      setErrorMessagePassword("Password is required");
+    } else {
       setErrorMessagePassword("");
     }
-    console.log(username, password);
+
+    if (username && password) {
+      console.log(username, password);
+    }
   }
 
   return (
@@ -35,7 +42,6 @@ function ContactForm() {
           value={username}
           onChange={handleInputChange}
         />
-
         <input
           type="password"
           placeholder="Enter your password"
@@ -44,7 +50,7 @@ function ContactForm() {
         />
         <p>{errorMessage}</p>
         <p>{errorMessagePassword}</p>
-        <button onChange={handleSubmit}>Submit</button>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );
