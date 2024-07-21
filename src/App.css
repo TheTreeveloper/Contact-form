@@ -1,0 +1,27 @@
+body {
+    background-color: hsl(0, 100%, 74%) ;
+    background-image: url('/images/bg-intro-mobile.png');
+    background-size: cover;
+  background-position: center;
+}
+
+@media screen and (min-width: 600px) {
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh !important;
+    }
+    .card-container {
+        display: flex;
+        flex-direction: row;
+        align-items:center;
+        justify-content: center;
+    }
+
+    body {
+        background-image: url('/images/bg-intro-desktop.png');
+        background-position: center;
+    }
+}

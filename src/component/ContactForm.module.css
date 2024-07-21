@@ -1,0 +1,176 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+
+.trial {
+    background-color:hsl(248, 32%, 49%) ;
+    color: white;
+    border: none;
+    border-radius: 0.7rem;
+    height:4rem;
+    width:20rem;
+    cursor: pointer;
+    box-shadow: 0px 5px 0px 0px rgba(0,0,0,0.1);
+}
+
+.trial span {
+    font-weight: 700;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: white;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 0.7rem;
+    position: relative;
+    box-shadow: 0px 5px 0px 0px rgba(0,0,0,0.2);
+}
+
+input {
+    width: 18rem;
+    height: 2.5rem;
+    color: black;
+    padding-left: 1rem;
+    font-weight: 700;
+    
+}
+
+form button {
+    width: 18rem;
+    height: 2.5rem;
+    color: white;
+    border: none;
+    background-color:hsl(154, 59%, 51%) ;
+    border-radius: 0.5rem;
+    
+}
+
+form button:hover {
+    cursor: pointer;
+    box-shadow: inset 0px -4px 0px 0px rgba(0,0,0,0.2);
+}
+
+.error {
+    color: hsl(0, 100%, 74%) ;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 0.7rem;
+    position: relative;
+   left: 4rem;
+}
+
+.errorIcon {
+    position: absolute;
+    width: 1.5rem;
+    left: 17rem;
+    bottom: 21rem;
+}
+
+.errorIcon2 {
+    position: absolute;
+    width: 1.5rem;
+    left: 17rem;
+    bottom: 16.4rem;
+}
+.errorIcon3 {
+    position: absolute;
+    width: 1.5rem;
+    left: 17rem;
+    bottom: 11.9rem;
+}
+.errorIcon4 {
+    position: absolute;
+    width: 1.5rem;
+    left: 17rem;
+    bottom:7.3rem;
+}
+
+.terms {
+    font-size: 0.5rem;
+    color: hsl(246, 25%, 77%);
+
+}
+
+.terms span {
+    font-weight: 700;
+    color: hsl(0, 100%, 74%) ;
+}
+
+@media screen and (min-width: 600px) {
+    
+    form {
+        padding: 2rem;
+    }
+
+    .trial {
+        width: 27rem;
+        height: 3rem;
+        
+    }
+
+    input {
+        width: 23rem;
+        height: 2.5rem;
+        color: black;
+        padding-left: 1.5rem;
+        font-weight: 700;   
+    }
+
+    input:active {
+        font-style: italic;
+    }
+    
+
+    .error {
+        color: hsl(0, 100%, 74%) ;
+        font-weight: 500;
+        font-size: 0.6rem;
+        text-align: right;
+        font-style: italic;
+        position: relative;
+        left: 7.5rem;
+    }
+
+    .errorIcon {
+        width: 1.2rem;
+        left: 23rem;
+        bottom: 21.8rem;
+    }
+    
+    .errorIcon2 {
+        width: 1.2rem;
+        left: 23rem;
+        bottom: 17.5rem;
+    }
+    .errorIcon3 {
+        width: 1.2rem;
+        left: 23rem;
+        bottom: 13rem;
+    }
+    .errorIcon4 {
+        width: 1.2rem;
+        left: 23rem;
+        bottom: 8.7rem;
+    }
+
+    form button {
+        width: 23rem;
+    }
+
+    .terms {
+        font-size: 0.7rem;
+    }
+
+    .terms span:hover {
+        cursor: pointer;
+        font-size: 0.75rem;
+    }
+}
